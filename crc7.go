@@ -36,7 +36,7 @@ var crc7SyndromeTable = [256]byte{
 	0x46, 0x4f, 0x54, 0x5d, 0x62, 0x6b, 0x70, 0x79,
 }
 
-// Crc7 computes the CRC-7 hash of the supplied value
+// ComputeHash computes the CRC-7 hash of the supplied value
 func ComputeHash(data []byte) byte {
 	var crc byte
 	for _, v := range data {
