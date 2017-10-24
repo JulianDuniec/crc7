@@ -37,7 +37,7 @@ var crc7SyndromeTable = [256]byte{
 }
 
 // Crc7 computes the CRC-7 hash of the supplied value
-func Crc7(data []byte) byte {
+func ComputeHash(data []byte) byte {
 	var crc byte
 	for _, v := range data {
 		crc = crc7SyndromeTable[(crc<<1)^v]
